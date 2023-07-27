@@ -389,7 +389,7 @@ body {
 }
 
 .lang-per :where(.css-dev-only-do-not-override-txh9fw).ant-progress .ant-progress-bg {
-    background-color: var(--secondary);
+    background-color: var(--secondary) !important;
 }
 
 .lang-per :where(.css-dev-only-do-not-override-txh9fw).ant-progress.ant-progress-status-active .ant-progress-bg::before {
