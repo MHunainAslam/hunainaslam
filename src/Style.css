@@ -347,7 +347,7 @@ body {
     transition: 0.4s;
 }
 
-.skill-lang:hover .lang-per :where(.css-dev-only-do-not-override-txh9fw).ant-progress .ant-progress-bg {
+.skill-lang:hover .lang-per  .ant-progress .ant-progress-bg {
     background-color: var(--primary) !important;
     transition: 0.4s;
 }
@@ -377,7 +377,7 @@ body {
 }
 
 
-.lang-per :where(.css-dev-only-do-not-override-txh9fw).ant-progress-line {
+.lang-per  .ant-progress-line {
     color: white !important;
     padding-inline: 20px;
 }
@@ -388,11 +388,11 @@ body {
     transition: 0.4s;
 }
 
-.lang-per :where(.css-dev-only-do-not-override-txh9fw).ant-progress .ant-progress-bg {
+.lang-per  .ant-progress .ant-progress-bg {
     background-color: var(--secondary) !important;
 }
 
-.lang-per :where(.css-dev-only-do-not-override-txh9fw).ant-progress.ant-progress-status-active .ant-progress-bg::before {
+.lang-per  .ant-progress.ant-progress-status-active .ant-progress-bg::before {
     background-color: red;
 }
 
