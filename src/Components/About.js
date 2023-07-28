@@ -19,7 +19,11 @@ const About = () => {
 
                     <p className="heading">Skills</p>
                     <div className='skills'>
+                        <div className="skill-icon-1"></div>
+                        <div className="skill-icon-2"></div>
                         <div className="row">
+                        <div className="frontend"></div>
+                        <div className="developer"></div>
                             <div className="col-sm-6 skills-left">
                                 <div className="skill-lang">
                                     <h4 className='lang-name'>HTML</h4>
