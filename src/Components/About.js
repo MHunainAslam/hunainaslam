@@ -18,29 +18,29 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row educationsec mt-0">
-                        <div className="col-md-6 pe-md-1 mt-5">
-                            <div className="leftbox">
+                        <div className="row educationsec mt-0">
+                            <div className="col-md-6 pe-md-1 mt-5">
+                                <div className="leftbox justify-content-center">
+                                    <div className='text-start'>
+                                        <h2 className='mt-2 heading'>Web Development</h2>
+                                        <h2 className='mt-2 para'>Completed</h2>
+                                        <h2 className='mt-2 para'>CGPA: 3.4</h2>
+                                        <h2 className='mt-2 para'>Yers: 2021 to 2022</h2>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div className="col-md-6 ps-md-1 mt-5">
+                                <div className="rightbox justify-content-center">
                                 <div className='text-start'>
-                                    <h2 className='mt-2 heading'>Web Development</h2>
-                                    <h2 className='mt-2 para'>Completed</h2>
-                                    <h2 className='mt-2 para'>CGPA: 3.4</h2>
-                                    <h2 className='mt-2 para'>Yers: 2021 to 2022</h2>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div className="col-md-6 ps-md-1 mt-5">
-                            <div className="rightbox">
-                            <div className='text-start'>
-                                    <h2 className='mt-2 heading'>Computer Science</h2>
-                                    <h2 className='mt-2 para'>Current Semester: 8 (Last)</h2>
-                                    <h2 className='mt-2 para'>CGPA: 3.4</h2>
-                                    <h2 className='mt-2 para'>Yers: 2020 to 2023</h2>
+                                        <h2 className='mt-2 heading'>Computer Science</h2>
+                                        <h2 className='mt-2 para'>Current Semester: 8 (Last)</h2>
+                                        <h2 className='mt-2 para'>CGPA: 3.4</h2>
+                                        <h2 className='mt-2 para'>Yers: 2020 to 2023</h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
               
                         <p className="heading">Skills</p>
                         <div className='skills'>
@@ -128,7 +128,7 @@ const About = () => {
                     <div className="row educationsec workexp">
                     <p className="heading">Working Experience</p>
                         <div className="col-md-6 pe-md-1 mt-5">
-                            <div className="leftbox">
+                            <div className="leftbox ">
                                 <div className='text-start'>
                                     <h2 className='mt-2 heading'>Freelancing</h2>
                                     <h2 className='mt-2 para'>Duration: 2022 to Present</h2>
@@ -138,7 +138,7 @@ const About = () => {
                             </div>
                         </div>
                         <div className="col-md-6 ps-md-1 mt-5">
-                            <div className="rightbox">
+                            <div className="rightbox ">
                             <div className='text-start'>
                                     <h2 className='mt-2 heading'>Eliteblue Technology</h2>
                                     <h2 className='mt-2 para'>Duration: Jan 2023 to Present</h2>

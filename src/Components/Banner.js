@@ -8,7 +8,7 @@ const Banner = () => {
         <div className="back-overlay"></div>
         <div className="container h-100 d-flex align-items-center justify-content-center">
           <div className="row">
-            <div className="row w-100 z-9">
+            <div className="d-md-flex w-100 z-9">
               <div className="col-md-8 my-auto">
                 <div className="banner-content">
                   <p className='name'>Hey, I'M Hunain Aslam</p>
