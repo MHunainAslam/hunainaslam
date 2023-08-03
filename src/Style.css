@@ -771,6 +771,9 @@ body {
     .about::after {
         font-size: 6rem;
     }
+    .portfolio-project-head::after {
+        font-size: 5rem;
+    }
 
     .nav-css a p {
         display: none;
@@ -871,6 +874,10 @@ body {
 
     .about::after {
         font-size: 4rem;
+        top: 60px;
+    }
+    .portfolio-project-head::after {
+        font-size: 3rem;
         top: 60px;
     }
 
