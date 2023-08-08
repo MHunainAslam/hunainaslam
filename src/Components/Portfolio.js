@@ -1,72 +1,47 @@
 import React from 'react'
-import img from '../img/project.png'
+import { useState, useEffect } from 'react'
+import Portfoliocard from './Portfoliocard';
+
 const Portfolio = () => {
+    const [projectss, setProjects] = useState()
+    const apiKey = "EoVsrpC7zfaWVWWDb9LTCb9K";
+    const projectsEndpoint = "https://api.vercel.com/v6/projects";
+
+    useEffect(() => {
+        fetch(projectsEndpoint, {
+            headers: {
+                Authorization: `Bearer ${apiKey}`
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                // Update the state with fetched data
+                setProjects(data);
+            })
+            .catch(error => {
+                // Handle errors here
+                console.error('Error:', error);
+            });
+    }, []);
+   
     return (
         <>
             <section className="portfolio-project" id='portfolio'>
-                <div>
+
                 <div className="portfolio-project-head"></div>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6 pe-md-1 ">
-                            <div className="card">
-                                <div className="card-body">
-                                    <img src={img} alt="" />
-                                    <div className='project-link'>
-                                        <a href="">
-                                            <p className="subheading">Portfolio</p>
-                                            <p className="heading">HunainAslam</p>
-                                            <p className="languages">HTML, CSS, JS & REACT</p>
-                                        </a>
-                                    </div>
-                                </div>
+                        {projectss?.projects.map((data) => {
+                            return <div className="col-md-6 pe-md-1">
+                                <Portfoliocard  data={data} />
                             </div>
-                        </div>
-                        <div className="col-md-6 pe-md-1 ">
-                            <div className="card">
-                                <div className="card-body">
-                                    <img src={img} alt="" />
-                                    <div className='project-link'>
-                                        <a href="">
-                                            <p className="subheading">Portfolio</p>
-                                            <p className="heading">HunainAslam</p>
-                                            <p className="languages">HTML, CSS, JS & REACT</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-6 pe-md-1 ">
-                            <div className="card">
-                                <div className="card-body">
-                                    <img src={img} alt="" />
-                                    <div className='project-link'>
-                                        <a href="">
-                                            <p className="subheading">Portfolio</p>
-                                            <p className="heading">HunainAslam</p>
-                                            <p className="languages">HTML, CSS, JS & REACT</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-6 pe-md-1 ">
-                            <div className="card">
-                                <div className="card-body">
-                                    <img src={img} alt="" />
-                                    <div className='project-link'>
-                                        <a href="">
-                                            <p className="subheading">Portfolio</p>
-                                            <p className="heading">HunainAslam</p>
-                                            <p className="languages">HTML, CSS, JS & REACT</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        })}
+
+
+
                     </div>
                 </div>
-                </div>
+
             </section>
         </>
     )

@@ -11,7 +11,7 @@ const Banner = () => {
             <div className="d-md-flex w-100 z-9">
               <div className="col-md-8 my-auto">
                 <div className="banner-content">
-                  <p className='name'>Hey, I'M Hunain Aslam</p>
+                  {/* <p className='name'>Hey, I'M Hunain Aslam</p> */}
                   <p className='detail'>Frontend Developer</p>
                   <div className="d-md-flex my-4">
                     <div className="col-lg-3 col-md-4 col-sm-6 col-6 text-start ">
