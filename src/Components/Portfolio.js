@@ -28,8 +28,8 @@ const Portfolio = () => {
         <>
             <section className="portfolio-project" id='portfolio'>
 
-                <div className="portfolio-project-head"></div>
-                <div className="container">
+                <div className="portfolio-project-head z-9"></div>
+                <div className="container z-9">
                     <div className="row">
                         {projectss?.projects.map((data) => {
                             return <div className="col-md-6 pe-md-1">

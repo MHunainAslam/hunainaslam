@@ -642,13 +642,19 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 100vh;
     position: relative;
     padding-block: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+.portfolio-project::after {
+    height: 100%;
+    background-color: rgba(74, 64, 64, 0.526);
+    content: "";
+    width: 100%;
+    position: absolute;
 }
 
 .portfolio-project-head::after {
@@ -659,7 +665,7 @@ body {
     color: transparent;
     -webkit-text-stroke-width: 2px;
     top: -50px;
-    -webkit-text-stroke-color: var(--primary-dark);
+    -webkit-text-stroke-color: #ffff0096;
     text-align: center;
     left: 20px;
 
