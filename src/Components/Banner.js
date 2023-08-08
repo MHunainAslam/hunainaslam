@@ -4,7 +4,7 @@ import prog from '../img/programacion-openfoam-symula-cfd-simulacion-fluidos.web
 const Banner = () => {
   return (
     <>
-      <section className='banner'>
+      <section className='banner' id='home'>
         <div className="back-overlay"></div>
         <div className="container h-100 d-flex align-items-center justify-content-center">
           <div className="row">

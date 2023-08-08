@@ -148,6 +148,49 @@ body {
     text-align: left;
 }
 
+.secondary-btn {
+    background: linear-gradient(201.69deg, #313844 -21.7%, #202329 141.87%);
+    color: var(--secondary) !important;
+    position: relative;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+    font-family: var(--poppins) !important;
+    box-shadow: 0 0.2rem 0.3rem rgb(31 34 41) !important;
+    text-decoration: none;
+    border: 0 !important;
+    outline: 0 !important;
+
+}
+
+.secondary-btn::after {
+    position: absolute;
+    content: "";
+    width: 10%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0 100% 100% 0;
+    background: linear-gradient(201.69deg, #f5ff41 -21.7%, #46e905 141.87%);
+    transition: 0.4s;
+
+}
+
+.secondary-btn:hover::after {
+    width: 100%;
+    border-radius: 0;
+    color: var(--primary-dark) !important;
+    z-index: -1;
+    transition: 0.4s;
+}
+
+.secondary-btn:hover {
+    color: var(--primary-dark) !important;
+    transition: 0.4s;
+    z-index: 999;
+}
+
 .primary-btn {
     background-color: var(--secondary) !important;
     color: var(--primary) !important;
@@ -649,9 +692,10 @@ body {
     justify-content: center;
     height: 100%;
 }
+
 .portfolio-project::after {
     height: 100%;
-    background-color: rgba(74, 64, 64, 0.526);
+    background-color: rgb(74 64 64 / 87%);
     content: "";
     width: 100%;
     position: absolute;
@@ -665,7 +709,7 @@ body {
     color: transparent;
     -webkit-text-stroke-width: 2px;
     top: -50px;
-    -webkit-text-stroke-color: #ffff0096;
+    -webkit-text-stroke-color: #ffff003d;
     text-align: center;
     left: 20px;
 
@@ -679,7 +723,8 @@ body {
 
 .portfolio-project .card .card-body {
     border: 1px solid var(--secondary);
-    margin: 10px;
+    margin: 5px;
+    padding: 5px;
     border-radius: 10px;
 }
 
