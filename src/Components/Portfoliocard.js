@@ -18,7 +18,7 @@ const Portfoliocard = ({ data }) => {
                     <div className="card-body">
                         <img src={appurl} alt="" />
                         <div className='project-link'>
-                            <a href={`/https:/${data.alias[0].domain}`} target='_blank'>
+                            <a href={data.alias[0].domain} target='_blank'>
                                 <p className="heading">{data.name}</p>
                             </a>
                         </div>
