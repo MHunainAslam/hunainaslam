@@ -13,18 +13,20 @@ const Portfoliocard = ({ data }) => {
 
     return (
         <>
-           
-               <div className="card">
-                    <div className="card-body">
+            <div className="card">
+                <div className="card-body">
+                    <a href={`http://${data.alias[0].domain}`} className='projecr-a' target='_blank'>
+                        
                         <img src={appurl} alt="" />
                         <div className='project-link'>
-                            <a href={`http://${data.alias[0].domain}`} target='_blank'>
-                                <p className="heading">{data.name}</p>
-                            </a>
+
+                        <p className="heading">{data.name}</p>
+
                         </div>
-                    </div>
+                    </a>
                 </div>
-            
+            </div>
+
         </>
     )
 }

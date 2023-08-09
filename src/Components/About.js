@@ -19,6 +19,7 @@ const About = () => {
                         </div>
                     </div>
                         <div className="row educationsec mt-0">
+                        <p className="heading">Education</p>
                             <div className="col-md-6 pe-md-1 mt-5">
                                 <div className="leftbox justify-content-center">
                                     <div className='text-start'>

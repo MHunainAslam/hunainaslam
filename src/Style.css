@@ -292,6 +292,12 @@ body {
     top: -40px;
 }
 
+.back-heading {
+    font-family: var(--bold-fonts);
+    font-size: 5rem;
+    font-weight: 800;
+    color: white;
+}
 .heading-main {
     font-family: var(--bold-fonts);
     font-size: 3rem;
@@ -678,7 +684,12 @@ body {
 .educationsec.workexp .leftbox::after {
     content: none;
 }
-
+.all-projects.portfolio-project{
+    background: transparent !important;
+}
+.all-projects.portfolio-project::after{
+    content: none;
+}
 .portfolio-project {
     background: url('./img/portfolio-bg2.jpg');
     background-position: center;
@@ -765,10 +776,11 @@ body {
     transition: 0.4s;
 }
 
-.portfolio-project .card:hover a {
+.portfolio-project .card:hover a , .portfolio-project .card:hover .project-link .heading {
     opacity: 1;
     transition: 0.4s;
 }
+
 
 .project-link .heading {
     text-decoration: underline;
@@ -778,16 +790,36 @@ body {
     font-family: 'big john';
     margin-bottom: 25px;
     font-size: 2rem;
+    opacity: 0;
 
 
 }
-
-.project-link a {
+.all-projects{
+    position: relative;
+    margin-top: 100px;
+}
+.projecr-a{
     text-decoration: none;
     color: var(--secondary);
-    opacity: 0;
+    /* opacity: 0; */
     transition: 0.4s;
     width: 100%;
+}
+
+.project-img-3{
+    position: absolute;
+    top: 200px;
+    right: 0;
+}
+.project-img-2{
+    position: absolute;
+    top:700px;
+    left: 20px;
+}
+.project-img-1{
+    position: absolute;
+    top: 1300px;
+    right: 20px;
 }
 
 @-webkit-keyframes mover {
@@ -918,7 +950,9 @@ body {
 }
 
 @media (max-width: 440px) {
-
+    .all-projects{
+        margin-top: 50px;
+    }
     .leftbox,
     .rightbox {
         border-radius: 10px;
