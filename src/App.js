@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Routes, } from "react-router-dom";
 import Allprojects from '../src/Components/Allprojects';
 import { useEffect, useState } from 'react';
 import Contact from './Components/Contact';
+import Footer  from './Components/Footer';
 function App() {
   const [loading, setloading] = useState(true)
   const [projectss, setProjects] = useState()
@@ -56,6 +57,7 @@ function App() {
             )} />
             <Route path="/allprojects" element={<Allprojects loading={loading} projectss={projectss} />}></Route>
           </Routes>
+          <Footer />
         </BrowserRouter>
 
       </>

@@ -150,7 +150,7 @@ body {
 
 .secondary-btn {
     background: linear-gradient(201.69deg, #313844 -21.7%, #202329 141.87%);
-    color: var(--secondary) !important;
+    color: white !important;
     position: relative;
     width: 100%;
     text-transform: uppercase;
@@ -164,25 +164,44 @@ body {
 
 }
 
+.form-border {
+    border: 1px solid var(--light) !important;
+    border-radius: 50px !important;
+}
+
+.form-border.secondary-btn::after {
+    top: 10px;
+}
+
+.form-border.secondary-btn:hover::after {
+    border-radius: 50px;
+}
+
 .secondary-btn::after {
     position: absolute;
     content: "";
-    width: 10%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border-radius: 0 100% 100% 0;
-    background: linear-gradient(201.69deg, #f5ff41 -21.7%, #46e905 141.87%);
+    width: 25px;
+    height: 25px;
+    top: 5px;
+    left: 5px;
+    border-radius: 100%;
+
+    background: linear-gradient(201.69deg, var(--light) -101.7%, var(--primary) 91.87%);
     transition: 0.4s;
 
 }
 
 .secondary-btn:hover::after {
     width: 100%;
-    border-radius: 0;
-    color: var(--primary-dark) !important;
+    height: 100%;
+    border-radius: 5px;
+    color: var(--secondary) !important;
+    background: var(--light);
     z-index: -1;
+    top: 0;
+    left: 0;
     transition: 0.4s;
+    box-shadow: 0.1px 0rem 0.5rem var(--light) !important;
 }
 
 .secondary-btn:hover {
@@ -298,6 +317,7 @@ body {
     font-weight: 800;
     color: white;
 }
+
 .heading-main {
     font-family: var(--bold-fonts);
     font-size: 3rem;
@@ -684,12 +704,15 @@ body {
 .educationsec.workexp .leftbox::after {
     content: none;
 }
-.all-projects.portfolio-project{
+
+.all-projects.portfolio-project {
     background: transparent !important;
 }
-.all-projects.portfolio-project::after{
+
+.all-projects.portfolio-project::after {
     content: none;
 }
+
 .portfolio-project {
     background: url('./img/portfolio-bg2.jpg');
     background-position: center;
@@ -776,7 +799,8 @@ body {
     transition: 0.4s;
 }
 
-.portfolio-project .card:hover a , .portfolio-project .card:hover .project-link .heading {
+.portfolio-project .card:hover a,
+.portfolio-project .card:hover .project-link .heading {
     opacity: 1;
     transition: 0.4s;
 }
@@ -794,11 +818,13 @@ body {
 
 
 }
-.all-projects{
+
+.all-projects {
     position: relative;
     margin-top: 100px;
 }
-.projecr-a{
+
+.projecr-a {
     text-decoration: none;
     color: var(--secondary);
     /* opacity: 0; */
@@ -806,20 +832,105 @@ body {
     width: 100%;
 }
 
-.project-img-3{
+.project-img-3 {
     position: absolute;
     top: 200px;
     right: 0;
 }
-.project-img-2{
+
+.project-img-2 {
     position: absolute;
-    top:700px;
+    top: 700px;
     left: 20px;
 }
-.project-img-1{
+
+.project-img-1 {
     position: absolute;
     top: 1300px;
     right: 20px;
+}
+
+.contact {
+    margin-block: 60px;
+}
+
+.custom-form {
+    background: transparent;
+    border: 1px solid var(--light);
+    ;
+    border-radius: 50px;
+    padding: 5px;
+    margin-block: 10px;
+}
+
+.custom-form-ta {
+    border-radius: 20px !important;
+}
+
+.custom-form input,
+.custom-form textarea {
+    border: 0;
+    background: transparent;
+    color: var(--light);
+
+}
+
+.text-area-span {
+    height: fit-content !important;
+    /* position: absolute; */
+}
+
+.custom-form input:focus,
+.custom-form textarea:focus {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    color: var(--light);
+}
+
+.custom-form span {
+    background-color: var(--light);
+    ;
+    border: 0;
+    border-radius: 50px !important;
+    width: auto;
+    color: var(--primary);
+    text-align: center;
+    justify-content: center;
+}
+
+.footar {
+    background-color: #1a1d22;
+    color: white;
+    margin-bottom: 0;
+    padding-block: 5px;
+}
+
+.contact-ref {
+    background-color: var(--light) !important;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.2rem !important;
+    border-radius: 50px !important;
+    padding-block: 5px;
+    transition: 0.4s;
+    margin-block: auto;
+   
+}
+.contact-ref a {
+    text-decoration: none;
+    display: flex;
+    color: var(--primary);
+    justify-content: center;
+}
+.contact-ref svg{
+    margin-block: auto;
+    margin-inline-end: 10px;
+}
+.contact-ref:hover{
+    transition: 0.4s;
+    box-shadow: 0.1px 0rem 0.5rem var(--light) !important;
+
 }
 
 @-webkit-keyframes mover {
@@ -950,9 +1061,10 @@ body {
 }
 
 @media (max-width: 440px) {
-    .all-projects{
+    .all-projects {
         margin-top: 50px;
     }
+
     .leftbox,
     .rightbox {
         border-radius: 10px;
