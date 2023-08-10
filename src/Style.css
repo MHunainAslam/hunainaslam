@@ -48,7 +48,10 @@ body {
     box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
     border-radius: 100px;
 }
-
+.z-top{
+    z-index: 9999999999999999;
+    position: absolute;
+}
 .banner {
     background: url(./img/banner-bg.jpg);
     width: 100%;
@@ -914,7 +917,7 @@ body {
     border-radius: 50px !important;
     padding-block: 5px;
     transition: 0.4s;
-    margin-block: auto;
+    margin-block: 10px;
    
 }
 .contact-ref a {

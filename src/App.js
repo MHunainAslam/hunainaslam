@@ -9,7 +9,8 @@ import { BrowserRouter, Route, Routes, } from "react-router-dom";
 import Allprojects from '../src/Components/Allprojects';
 import { useEffect, useState } from 'react';
 import Contact from './Components/Contact';
-import Footer  from './Components/Footer';
+import Footer from './Components/Footer';
+import toast, { Toaster } from 'react-hot-toast';
 function App() {
   const [loading, setloading] = useState(true)
   const [projectss, setProjects] = useState()
@@ -43,6 +44,13 @@ function App() {
       <>
 
         <BrowserRouter>
+          <div className='z-top'>
+            <Toaster
+
+              position="top-right"
+              reverseOrder={false}
+            />
+          </div>
           <Navbar />
           <Routes>
             <Route path="/" element={(

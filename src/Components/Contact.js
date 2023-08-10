@@ -1,8 +1,45 @@
 import React, { useEffect, useState } from 'react'
-
+import emailjs from 'emailjs-com';
+import { toast } from 'react-hot-toast';
 const Contact = () => {
-
-
+    const [send, setsend] = useState(true)
+    const [contactvalue, setcontactvalue] = useState({
+        firstname: '',
+        lastname: '',
+        email: '',
+        subject: '',
+        msg: '',
+    })
+    const handleinp = (e) => {
+        const { name, value } = e.target;
+        setcontactvalue((allinp) => ({
+            ...allinp,
+            [name]: value
+        }))
+    }
+    const formsubmit = (e) => {
+        e.preventDefault();
+        setsend(false)
+        emailjs
+            .sendForm('service_o7dtp1a', 'template_l0fxo5c', e.target, 'fVsE17VJyVluhQ8s5')
+            .then((response) => {
+                console.log('Email sent:', response);
+                setsend(true)
+                toast.success("You Message Has Been Send")
+            })
+            .catch((error) => {
+                console.error('Error sending email:', error);
+                toast.error("Something Went Wrong")
+            });
+        setcontactvalue({
+            firstname: '',
+            lastname: '',
+            email: '',
+            subject: '',
+            msg: '',
+        })
+        console.log(contactvalue.firstname);
+    }
 
 
     return (
@@ -14,12 +51,12 @@ const Contact = () => {
                     <div className="contact">
                         <p className="heading mb-3">Contact</p>
 
-                        <form className='needs-validation' novalidate>
+                        <form className='needs-validation' id='contactform' onSubmit={formsubmit} novalidate>
                             <div className="row">
                                 <div className="col-md-4">
                                     <div class="input-group flex-nowrap custom-form">
                                         <span class="input-group-text" id="">First Name</span>
-                                        <input type="text" class="form-control" aria-label="FirstName" required aria-describedby="addon-wrapping" />
+                                        <input type="text" class="form-control" aria-label="FirstName"  aria-describedby="addon-wrapping" name='firstname' value={contactvalue.firstname} onChange={handleinp} required/>
                                         <div class="invalid-feedback">
                                             Please choose a username.
                                         </div>
@@ -28,30 +65,32 @@ const Contact = () => {
                                 <div className="col-md-4">
                                     <div class="input-group flex-nowrap custom-form">
                                         <span class="input-group-text" id="">Last Name</span>
-                                        <input type="text" class="form-control" aria-label="LastName" aria-describedby="addon-wrapping" />
+                                        <input type="text" class="form-control" aria-label="LastName" aria-describedby="addon-wrapping" name='lastname' value={contactvalue.lastname} onChange={handleinp} required/>
                                     </div>
                                 </div>
                                 <div className="col-md-4">
                                     <div class="input-group flex-nowrap custom-form">
                                         <span class="input-group-text" id="">Email</span>
-                                        <input type="text" class="form-control" aria-label="Email" aria-describedby="addon-wrapping" />
+                                        <input type="email" class="form-control" aria-label="Email" aria-describedby="addon-wrapping" name='email' value={contactvalue.email} onChange={handleinp} required/>
                                     </div>
                                 </div>
                                 <div className="col-md-12">
                                     <div class="input-group flex-nowrap custom-form">
                                         <span class="input-group-text" id="">Subject</span>
-                                        <input type="text" class="form-control" aria-label="Subject" aria-describedby="addon-wrapping" />
+                                        <input type="text" class="form-control" aria-label="Subject" aria-describedby="addon-wrapping" name='subject' value={contactvalue.subject} onChange={handleinp} required/>
                                     </div>
                                 </div>
                                 <div className="col-md-12">
                                     <div class="input-group flex-nowrap custom-form custom-form-ta">
                                         <span class="input-group-text text-area-span" id="" >Message</span>
-                                        <textarea name="" id="" className='form-control w-100' rows="10"></textarea>
+                                        <textarea id="" className='form-control w-100' rows="10" name='msg' value={contactvalue.msg} onChange={handleinp} required></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-md-4 col-sm-6 mx-auto mt-3">
-                                <button type='submit' className='btn secondary-btn form-border'> Send</button>
+                                <button type='submit' className='btn secondary-btn form-border'>
+                                    {send ? 'send' : 'sending...'}
+                                </button>
                             </div>
                         </form>
                         <div className="row border-0  mt-5">
@@ -84,9 +123,9 @@ const Contact = () => {
                             <div className="col-md-4">
                                 <div className="contact-ref">
                                     <a href="#" className=''>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                                            </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                        </svg>
                                         <div className=' pt-2'>
                                             Hunain Aslam
                                         </div>
