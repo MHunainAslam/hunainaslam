@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import img from '../img/project.png'
 const Portfoliocard = ({ data }) => {
     const [appurl, setappurl] = useState(
         (`http://image.thum.io/get/auth/68541-hunainaslam/height/100/http://${data.alias[0].domain}`)
