@@ -25,7 +25,7 @@ const About = () => {
                                     <div className='text-start'>
                                         <h2 className='mt-2 heading'>Web Development</h2>
                                         <h2 className='mt-2 para'>Completed</h2>
-                                        <h2 className='mt-2 para'>CGPA: 3.4</h2>
+                                        <h2 className='mt-2 para'>Percentage: 70</h2>
                                         <h2 className='mt-2 para'>Yers: 2021 to 2022</h2>
                                     </div>
                                     
@@ -142,7 +142,7 @@ const About = () => {
                             <div className="rightbox ">
                             <div className='text-start'>
                                     <h2 className='mt-2 heading'>Eliteblue Technology</h2>
-                                    <h2 className='mt-2 para'>Duration: Jan 2023 to Present</h2>
+                                    <h2 className='mt-2 para'>Duration: Dec 2023 to Present <br />  <small className='intern-fs'> Intern (June 2022 to Nov 2022) </small> </h2>
                                     <h2 className='mt-2 para'>Role: Frontend Developer</h2>
                                 </div>
                             </div>

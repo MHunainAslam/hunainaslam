@@ -934,9 +934,10 @@ body {
 .contact-ref:hover{
     transition: 0.4s;
     box-shadow: 0.1px 0rem 0.5rem var(--light) !important;
-
 }
-
+.intern-fs{
+    font-size: 0.7rem;
+}
 @-webkit-keyframes mover {
     0% {
         transform: translateY(0);
