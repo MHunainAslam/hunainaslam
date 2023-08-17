@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 const Portfoliocard = ({ data }) => {
     const [appurl, setappurl] = useState(
-        (`http://image.thum.io/get/auth/68541-hunainaslam/height/100/http://${data.alias[0].domain}`)
+        (`http://image.thum.io/get/auth/68527-hunainaslam.vercel.app/height/100/https://${data.alias[0].domain}`)
+       
     )
     // `http://image.thum.io/get/auth/68527-hunainaslam.vercel.app//height/100/http://${data.name}.vercel.app/`
 
