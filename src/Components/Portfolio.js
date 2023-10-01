@@ -3,15 +3,16 @@ import { useState, useEffect } from 'react'
 import Portfoliocard from './Portfoliocard';
 import { NavLink } from 'react-router-dom';
 import Loader from './Loader';
+import { HashLink } from 'react-router-hash-link';
 
 
 
-const Portfolio = ({projectss , loading}) => {
-   
+const Portfolio = ({ projectss, loading }) => {
+
     return (
         <>
-            {loading ? <Loader/>
-            :
+            {loading ? <Loader />
+                :
                 <section className="portfolio-project" id='portfolio'>
 
                     <div className="portfolio-project-head z-9"></div>
@@ -25,7 +26,7 @@ const Portfolio = ({projectss , loading}) => {
                             })}
                         </div>
                         <div className="col-md-3 col-6 mx-auto mt-4">
-                            <NavLink to={'/allprojects'} className='btn secondary-btn'>View All</NavLink>
+                            <NavLink  to={'/allprojects'} className='btn secondary-btn'>View All</NavLink>
                         </div>
                     </div>
 

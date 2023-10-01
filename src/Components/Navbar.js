@@ -1,11 +1,18 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
 const Navbar = () => {
+
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname])
     return (
         <>
             <section className='nav-sec'>
                 <div className="container">
+                
                     <nav class="navbar navbar-expand  nav-css">
                         <div class="container-fluid justify-content-center">
 

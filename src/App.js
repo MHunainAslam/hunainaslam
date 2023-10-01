@@ -5,7 +5,7 @@ import Navbar from './Components/Navbar';
 import Banner from './Components/Banner';
 import About from './Components/About';
 import Portfolio from './Components/Portfolio';
-import { BrowserRouter, Route, Routes, } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation, } from "react-router-dom";
 import Allprojects from '../src/Components/Allprojects';
 import { useEffect, useState } from 'react';
 import Contact from './Components/Contact';
