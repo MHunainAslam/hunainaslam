@@ -132,7 +132,7 @@ const About = () => {
                             <div className="leftbox ">
                                 <div className='text-start'>
                                     <h2 className='mt-2 heading'>Eliteblue Technology</h2>
-                                    <h2 className='mt-2 para'>Duration: Dec 2023 to Sep 2023 <br />  <small className='intern-fs'> Intern (June 2022 to Nov 2022) </small> </h2>
+                                    <h2 className='mt-2 para'>Duration: Dec 2022 to Sep 2023 <br />  <small className='intern-fs'> Intern (Dec 2022 to Jan 2023) </small> </h2>
                                     <h2 className='mt-2 para'>Role: Frontend Developer</h2>
 
                                 </div>
@@ -148,7 +148,7 @@ const About = () => {
                             <div className="rightbox ">
                                 <div className='text-start'>
                                     <h2 className='mt-2 heading'>Zibble Tech</h2>
-                                    <h2 className='mt-2 para'>Duration: Sep 2023 to Present <br />  <small className='intern-fs'> Intern (June 2022 to Nov 2022) </small> </h2>
+                                    <h2 className='mt-2 para'>Duration: Sep 2023 to Present <br />  </h2>
                                     <h2 className='mt-2 para'>Role: Frontend Developer</h2>
 
                                 </div>
