@@ -37,7 +37,7 @@ const About = () => {
                                     <h2 className='mt-2 heading'>Computer Science</h2>
                                     <h2 className='mt-2 para'>Current Semester: 8 (Last)</h2>
                                     <h2 className='mt-2 para'>CGPA: 3.4</h2>
-                                    <h2 className='mt-2 para'>Yers: 2020 to Present</h2>
+                                    <h2 className='mt-2 para'>Yers: 2020 to 2023</h2>
                                 </div>
                             </div>
                         </div>
@@ -117,7 +117,7 @@ const About = () => {
                                 <div className="skill-lang">
                                     <h4 className='lang-name'>Vue JS</h4>
                                     <h4 className='lang-per'>
-                                        <Progress percent={50} status="active" />
+                                        <Progress percent={40} status="active" />
                                     </h4>
 
                                     <div className="skills-point"></div>
