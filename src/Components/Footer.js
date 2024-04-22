@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <section>
             
-            <p className='footar'>&copy; &nbsp;  Copyright 2023 - 2024</p>
+            <p className='footar'>&copy; &nbsp;  Copyright {new Date()?.getFullYear()}</p>
 
         </section>
     )

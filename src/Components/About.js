@@ -24,9 +24,9 @@ const About = () => {
                             <div className="leftbox justify-content-center">
                                 <div className='text-start'>
                                     <h2 className='mt-2 heading'>Web Development</h2>
-                                    <h2 className='mt-2 para'>Completed</h2>
+                                    {/* <h2 className='mt-2 para'>Completed</h2> */}
                                     <h2 className='mt-2 para'>Percentage: 70</h2>
-                                    <h2 className='mt-2 para'>Yers: 2021 to 2022</h2>
+                                    <h2 className='mt-2 para'>Years: 2021 to 2022</h2>
                                 </div>
 
                             </div>
@@ -35,9 +35,9 @@ const About = () => {
                             <div className="rightbox justify-content-center">
                                 <div className='text-start'>
                                     <h2 className='mt-2 heading'>Computer Science</h2>
-                                    <h2 className='mt-2 para'>Current Semester: 8 (Last)</h2>
-                                    <h2 className='mt-2 para'>CGPA: 3.4</h2>
-                                    <h2 className='mt-2 para'>Yers: 2020 to 2023</h2>
+                                    {/* <h2 className='mt-2 para'>Current Semester: 8 (Last)</h2> */}
+                                    <h2 className='mt-2 para'>CGPA: 3.2</h2>
+                                    <h2 className='mt-2 para'>Years: 2020 to 2023</h2>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +99,7 @@ const About = () => {
                                 <div className="skill-lang">
                                     <h4 className='lang-name'>React Js</h4>
                                     <h4 className='lang-per'>
-                                        <Progress percent={70} status="active" />
+                                        <Progress percent={80} status="active" />
                                     </h4>
                                     <div className="skills-point"></div>
                                 </div>
@@ -129,11 +129,32 @@ const About = () => {
 
                     <div className="row educationsec workexp">
                         <p className="heading">Working Experience</p>
-                        <div className="col-md-4 mt-5">
+
+                        {/* <div className="col-md-4 px-md-0 mt-5">
+                            <div className="centerbox ">
+                                <div className='text-start'>
+                                    <h2 className='mt-2 heading-m'>Zibble Tech</h2>
+                                    <h2 className='mt-2 para'>Duration: Sep 23 to Nov 23<br />  </h2>
+                                    <h2 className='mt-2 para'>Role: Jr. Frontend Developer</h2>
+
+                                </div>
+                            </div>
+                        </div> */}
+                        <div className="col-md-6  mt-5">
                             <div className="leftbox ">
                                 <div className='text-start'>
+                                    <h2 className='mt-2 heading-m'>Chroma Solution</h2>
+                                    <h2 className='mt-2 para'>Duration: Nov 23 to Present <br />  </h2>
+                                    <h2 className='mt-2 para'>Role:  Frontend Developer</h2>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6 mt-5">
+                            <div className="rightbox ">
+                                <div className='text-start'>
                                     <h2 className='mt-2 heading-m'>Eliteblue Technology</h2>
-                                    <h2 className='mt-2 para'>Duration: Dec 22 to Sep 23 <br />  <small className='intern-fs'> Intern (Dec 2022 to Jan 2023) </small> </h2>
+                                    <h2 className='mt-2 para'>Duration: June 22 to Oct 23 <br />  <small className='intern-fs'> Intern (June to July 2022) </small> </h2>
                                     <h2 className='mt-2 para'>Role: Jr. Frontend Developer</h2>
 
                                 </div>
@@ -143,26 +164,6 @@ const About = () => {
                                     <h2 className='mt-2 para'>Role: Frontend Developer</h2>
                                 </div> */}
 
-                            </div>
-                        </div>
-                        <div className="col-md-4 px-md-0 mt-5">
-                            <div className="centerbox ">
-                                <div className='text-start'>
-                                    <h2 className='mt-2 heading-m'>Zibble Tech</h2>
-                                    <h2 className='mt-2 para'>Duration: Sep 23 to Nov 23<br />  </h2>
-                                    <h2 className='mt-2 para'>Role: Jr. Frontend Developer</h2>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4  mt-5">
-                            <div className="rightbox ">
-                                <div className='text-start'>
-                                    <h2 className='mt-2 heading-m'>Chroma Solution</h2>
-                                    <h2 className='mt-2 para'>Duration: Nov 23 to Present <br />  </h2>
-                                    <h2 className='mt-2 para'>Role:  Frontend Developer</h2>
-
-                                </div>
                             </div>
                         </div>
                     </div>

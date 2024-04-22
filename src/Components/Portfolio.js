@@ -61,7 +61,7 @@ const Portfolio = ({ projectss, loading }) => {
                             <div className="col-md-6 pe-md-1">
                                 <div className="card">
                                     <div className="card-body">
-                                        <a href={`https://eoscl.vercel.app/`} className='projecr-a' target='_blank'>
+                                        <a href={`https://eobusinessclub.com/`} className='projecr-a' target='_blank'>
 
                                             <img src={eoscl} alt="" className='h-auto object-fit-contain'/>
                                             <div className='project-link'>
