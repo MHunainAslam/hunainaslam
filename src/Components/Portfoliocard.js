@@ -9,7 +9,6 @@ const Portfoliocard = ({ data }) => {
     // setappurl(``)
     // console.log(data.alias[0].domain);
 
-    console.log("anchor", data.alias)
 
     return (
         <>
